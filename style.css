@@ -1,0 +1,86 @@
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+#carousel {
+  text-align: center;
+}
+
+.carousel-image {
+  width: 500px;
+}
+
+.image-container {
+  position: relative;
+  display: inline-block;
+}
+
+.previous-btn,
+.forward-btn {
+  position: absolute;
+}
+
+.previous-btn {
+  left: -20px;
+  top: 35%;
+}
+
+.forward-btn {
+  right: -20px;
+  top: 35%;
+}
+
+.btn {
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  border-width: 0;
+  background-color: #3498db;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.btn:hover {
+  animation-name: btnHover;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+.btn:active {
+  animation-name: imageTransition;
+  animation-duration: 1s;
+}
+
+@keyframes btnHover {
+  100% {
+    background-color: #2980b9;
+  }
+}
+
+.circle {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  background-color: #bdc3c7;
+  border-radius: 20px;
+  cursor: pointer;
+  margin-left: 5px;
+}
+
+.circle.selectedCircle {
+  background-color: #2c3e50;
+}
+
+.circle:hover:not(.selectedCircle) {
+  animation-name: carouselCircleHover;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes carouselCircleHover {
+  100% {
+    background-color: #7f8c8d;
+  }
+}
